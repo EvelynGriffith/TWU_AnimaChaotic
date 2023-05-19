@@ -1,9 +1,9 @@
-from src.SceneFileReader import SceneFileReader
-from src.SceneManager import SceneManager
-from src.DataBaseManager import DataBaseManager as db_manager
+from SceneFileReader import SceneFileReader
+from SceneManager import SceneManager
+from DataBaseManager import DataBaseManager as db_manager
 
-#FILENAME = "../../sample_stories/street_story_json.json"
-FILENAME = "../../sample_stories/simplified_street.json"
+FILENAME = r"C:\Users\rachm\Downloads\TWU_AnimaChaotic-master\TWU_AnimaChaotic-master\src\story.json"
+#FILENAME = "../../sample_stories/simplified_street.json"
 
 
 if __name__=="__main__":
