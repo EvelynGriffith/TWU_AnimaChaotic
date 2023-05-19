@@ -1,11 +1,11 @@
-
 import json
 from collections import namedtuple
 
 filename = "Story1.json"
 with open(filename, "w") as f:
   while True:
-    user_input = f.write(input("Add your story text here: "))
+    # adds a user input text into a generated json file, in a string format!
+    user_input = str(f.write('"' + (input("Please add your story text here: ") + '"')))
     #       f.write("\n")
     #   except EOFError:
     break
@@ -29,9 +29,8 @@ class SceneFileReader(object):
 
     # reading the file and attributing scene nodes
     def readFile(self):
-
-        with filename as data_file:
-            data = json.load(data_file)
+        data_file = open("Story1.json")
+        data = json.load(data_file)
 
         scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data["scene_nodes"]]
 
