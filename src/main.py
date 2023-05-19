@@ -11,7 +11,7 @@ if __name__=="__main__":
     #Connect to the database
     db_manager("mongodb://localhost:27017/").connect()
     #Read the output of the NLP module
-    scene_file_reader = SceneFileReader(FILENAME) # May be change that to a string
+    scene_file_reader = SceneFileReader() # May be change that to a string
     scene_nodes = scene_file_reader.readFile()
     #Create the scene manager
     app = SceneManager(scene_nodes)
