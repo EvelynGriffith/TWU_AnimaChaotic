@@ -15,9 +15,10 @@ class DataBaseManager(object):
         try:
             client = mongo_client(self.connection_string)
         except:
+            client = mongo_client(self.connection_string)
             print("Failed to connect to the database")
 
-        db = client["models"]
+            db = client["models"]
 
        # return self.client["models"]
 
