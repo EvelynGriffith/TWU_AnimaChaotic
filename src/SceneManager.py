@@ -7,13 +7,13 @@ from direct.interval.IntervalGlobal import Sequence
 from panda3d.core import Point3, NodePath
 from panda3d.ai import *
 from direct.gui.OnscreenImage import OnscreenImage
-from src.Actor import *
-from src.Action import *
+from Actor import *
+from Action import *
 import random
 
-from src.SceneFileReader import SceneFileReader
+from SceneFileReader import SceneFileReader
 
-DEFAULTBACKGROUND = "../../backgrounds/street/street1.jpg"
+DEFAULTBACKGROUND = r"C:\Users\rachm\Downloads\TWU_AnimaChaotic-master\TWU_AnimaChaotic-master\backgrounds"
 
 class SceneManager(ShowBase):
 
@@ -49,29 +49,24 @@ class SceneManager(ShowBase):
                     action.play_action()
 
 
-
-
-
-
-    def load_background(self,scene_tag,scene_time):
-        #TODO : Add dummy background to load in case there is no background
-        background_dir_path = os.path.join("../../backgrounds",scene_tag)
-        images = [str(image) for image in os.listdir(self.background_dir_path)]
-        #pick random background from the given images
-        if len(images)>0:
-            imageindex = random.randint(0,len(images)-1)
-            image = images[imageindex]
-            self.background_path=os.path.join(background_dir_path,image)
+    def load_background(self, scene_tag, scene_time):
+        # TODO: Add dummy background to load in case there is no background
+        background_dir_path = os.path.join(r"C:\Users\rachm\Downloads\TWU_AnimaChaotic-master\TWU_AnimaChaotic-master\backgrounds", scene_tag)
+        images = [str(image) for image in os.listdir(background_dir_path)]
+        
+        if len(images) > 0:
+            image_index = random.randint(0, len(images) - 1)
+            image = images[image_index]
+            self.background_path = os.path.join(background_dir_path, image)
         else:
-            self.background_path=DEFAULTBACKGROUND
+            self.background_path = DEFAULTBACKGROUND
 
-        #TODO: Adjust the image brightness to match day or night(scene_time)
+        # TODO: Adjust the image brightness to match day or night (scene_time)
 
-        self.b=OnscreenImage(parent=self.render2d, image =self.background_path)
-
+        self.b = OnscreenImage(parent=self.render2d, image=self.background_path)
         self.b.reparentTo(self.render2d)
-
         self.cam2d.node().getDisplayRegion(0).setSort(-20)
+
 
 
 
