@@ -1,0 +1,23 @@
+{
+    "scene_nodes": [
+      {
+        "text": "Once upon a time, in a quaint little village, there lived a young girl named Lily.",
+        "scene_tag":"street",
+        "time":"da",
+        "static_objects":"",
+        "Actors":"",
+        "intial_constrains":""
+      },
+      {
+        "text": "Lily was known for her curious nature and adventurous spirit.",
+        "scene_tag":"street",
+        "time":"",
+        "static_objects":"",
+        "Actors":"",
+        "intial_constrains":""
+      }
+      
+    ]
+    
+  }
+  
