@@ -1,6 +1,6 @@
 from direct.actor.Actor import Actor
 from collections import namedtuple
-from src.DataBaseManager import db
+from DataBaseManager import db
 import os
 
 
