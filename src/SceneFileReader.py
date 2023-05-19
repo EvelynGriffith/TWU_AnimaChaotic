@@ -165,19 +165,22 @@ with open(filename, "w") as f:
 #     json.dump(out, filename, indent=2)
 
 class SceneFileReader():
-    # attempting to read the filename and set it to filename
-    # def __init__(self,filename):
+    filename = "Story1.json"
+    with open(filename, "r") as f:
+    
+        # def __init__(self,f):
 
-    #     self.filename = filename
+        #     self.f = f
 
     # reading the file and attributing scene nodes
-    def readFile(self):
-        # data_file = open("Story1.json")
-        # f = open(r"C:\Users\gforc\TWU_AnimaChaotic\Story1.json")
-        data = json.loads(filename.read())
-        # print(type(data))
-        scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0-x]]
-        # scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0 - x]]
-        # scene_nodes = [namedtuple('SceneNode', node.keys())(*node.values())]
+        def readFile(self):
+            # data_file = open("Story1.json")
+            # f = open(r"C:\Users\gforc\TWU_AnimaChaotic\Story1.json")
+            with open(filename, "r"):
+                data = json.load(self.f)
+                # print(type(data))
+                scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0-x]]
+                # scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0 - x]]
+                # scene_nodes = [namedtuple('SceneNode', node.keys())(*node.values())]
 
-        return scene_nodes
+                return scene_nodes
