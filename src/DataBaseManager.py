@@ -13,7 +13,7 @@ class DataBaseManager(object):
     def connect(self):
         global db
         try:
-            client = mongo_client(self.connection_string)
+            client = mongo_client 
         except:
             client = mongo_client(self.connection_string)
             print("Failed to connect to the database")
