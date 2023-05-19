@@ -177,7 +177,7 @@ class SceneFileReader():
             # data_file = open("Story1.json")
             # f = open(r"C:\Users\gforc\TWU_AnimaChaotic\Story1.json")
             with open(filename, "r"):
-                data = json.load(self.f)
+                data = json.load(self.filename)
                 # print(type(data))
                 scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0-x]]
                 # scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0 - x]]
