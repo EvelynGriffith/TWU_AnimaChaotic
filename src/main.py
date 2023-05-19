@@ -3,7 +3,7 @@ from src.SceneManager import SceneManager
 from src.DataBaseManager import DataBaseManager as db_manager
 
 #FILENAME = "../../sample_stories/street_story_json.json"
-FILENAME = "../../sample_stories/simplified_street.json"
+FILENAME = "C:/Users/gforc/TWU_AnimaChaotic/Story1"
 
 
 if __name__=="__main__":
