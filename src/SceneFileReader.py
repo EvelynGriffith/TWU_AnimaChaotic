@@ -12,6 +12,7 @@ class SceneFileReader(object):
 
         with open(self.filename) as data_file:
             data = json.load(data_file)
+            
 
         scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data["scene_nodes"]]
 
