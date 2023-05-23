@@ -171,13 +171,16 @@ class SceneFileReader():
         # def __init__(self,f):
 
         #     self.f = f
-
+        values = noun_list
+        keys = [i for i in range(len(values))]
     # reading the file and attributing scene nodes
         def readFile(self):
             # data_file = open("Story1.json")
             # f = open(r"C:\Users\gforc\TWU_AnimaChaotic\Story1.json")
-            with open(filename, "r"):
-                data = json.load(self.filename)
+            with open(filename, "r") as file:
+                data = json.load(file)
+                print(keys)
+                print(values)
                 # print(type(data))
                 scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0-x]]
                 # scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0 - x]]
