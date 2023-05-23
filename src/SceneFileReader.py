@@ -131,21 +131,21 @@ adjectives = str(adjective_list)
 # This prints the nouns from whatever input is entered into a dictionary format within the json file.
 noun_dict = {}
 values = noun_list
-keys = [i for i in range(len(values))]
+keys = [str(i) for i in range(len(values))]
 # print(values)
 # print(keys)
-for i in keys:
-    noun_dict[i] = values[i]
-print(noun_dict)
+for index in keys:
+    noun_dict[int(index)] = values[int(index)]
+# print(noun_dict)
 
 verb_dict = {}
 values = verb_list
-keys = [i for i in range(len(values))]
+keys = [str(i) for i in range(len(values))]
 # print(values)
 # print(keys)
-for i in keys:
-    verb_dict[i] = values[i]
-print(verb_dict)
+for index in keys:
+    verb_dict[int(index)] = values[int(index)]
+# print(verb_dict)
 
 # this is reopening the created Story1 file and replacing the text with the appropriate dictionaries
 filename = "Story1.json"
@@ -171,18 +171,18 @@ class SceneFileReader():
         # def __init__(self,f):
 
         #     self.f = f
-        values = noun_list
-        keys = [i for i in range(len(values))]
+        # values = noun_list
+        # keys = [i for i in range(len(values))]
     # reading the file and attributing scene nodes
         def readFile(self):
             # data_file = open("Story1.json")
             # f = open(r"C:\Users\gforc\TWU_AnimaChaotic\Story1.json")
             with open(filename, "r") as file:
                 data = json.load(file)
-                print(keys)
-                print(values)
+                # print(type(keys))
+                # print(type(values))
                 # print(type(data))
-                scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0-x]]
+                scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0 - x]]
                 # scene_nodes = [namedtuple('SceneNode',node.keys())(*node.values()) for node in data[0 - x]]
                 # scene_nodes = [namedtuple('SceneNode', node.keys())(*node.values())]
 
